@@ -49,7 +49,7 @@ function deleteAutocomp(event) {
 };
 const checkFieldIsEmptyTimeout = debounce(checkFieldIsEmpty, 1000);
 
-searchField.addEventListener("keyup", deleteAutocomp);
+searchField.addEventListener("keyup", checkFieldIsEmptyTimeout);
 searchField.addEventListener("keyup", deleteAutocomp);
 searchField.addEventListener("focusout", deleteAutocomp);
 searchField.addEventListener("focus", checkFieldIsEmptyTimeout);
